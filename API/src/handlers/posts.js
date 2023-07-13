@@ -1,4 +1,4 @@
-const { getPosts } = require("../controllers/getPost");
+const { getPosts, createPost } = require("../controllers/getPost");
 
 const getPostsHandler = async (req, res) => {
   try {
@@ -9,4 +9,12 @@ const getPostsHandler = async (req, res) => {
   }
 };
 
-module.exports = { getPostsHandler };
+const newPostHandler = async (req, res) => {
+  try {
+    const newPost = await createPost(req.body);
+    res.send(newPost);
+  } catch (error) {
+    res.status(404).json({ error: error.message });
+  }
+};
+module.exports = { getPostsHandler, newPostHandler };
