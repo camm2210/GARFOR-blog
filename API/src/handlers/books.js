@@ -11,7 +11,8 @@ const getBooksHandler = async (req, res) => {
 
 const postBookHandler = async (req, res) => {
   try {
-    const newBook = await postBook();
+    const bookToCreate = req.body;
+    const newBook = await postBook(bookToCreate);
     res.send(newBook);
   } catch (error) {
     res.status(404).json({ error: error.message });
