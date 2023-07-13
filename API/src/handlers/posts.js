@@ -1,20 +1,21 @@
-const { getPosts, createPost } = require("../controllers/getPost");
+const { getPosts, createPost } = require("../controllers/post");
 
 const getPostsHandler = async (req, res) => {
   try {
     const allPosts = await getPosts();
-    res.send(allPosts);
+    res.status(200).send(allPosts);
   } catch (error) {
     res.status(404).json({ error: error.message });
   }
 };
 
-const newPostHandler = async (req, res) => {
+const createPostHandler = async (req, res) => {
   try {
-    const newPost = await createPost(req.body);
-    res.send(newPost);
+    const postToCreate = req.body;
+    const newPost = await createPost(postToCreate);
+    res.status(201).send(newPost);
   } catch (error) {
-    res.status(404).json({ error: error.message });
+    res.status(400).json({ error: error.message });
   }
 };
-module.exports = { getPostsHandler, newPostHandler };
+module.exports = { getPostsHandler, createPostHandler };

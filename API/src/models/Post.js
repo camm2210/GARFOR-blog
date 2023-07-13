@@ -1,9 +1,23 @@
 const mongoose = require("mongoose");
 
 const postSchema = new mongoose.Schema({
-  name: String,
-  author: String,
-  content: String,
+  title: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  author: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  content: {
+    type: String,
+    required: true,
+  },
 });
 
 const Posts = mongoose.model("Post", postSchema);
