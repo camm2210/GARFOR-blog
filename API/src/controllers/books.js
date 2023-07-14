@@ -11,4 +11,9 @@ const postBook = async ({ title, author, description, content }) => {
   return newBook;
 };
 
-module.exports = { getBooks, postBook };
+const deleteBook = async (id) => {
+  const deletedBook = await Book.findByIdAndDelete(id);
+  return deletedBook;
+};
+
+module.exports = { getBooks, postBook, deleteBook };

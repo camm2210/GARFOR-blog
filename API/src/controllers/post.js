@@ -11,4 +11,9 @@ createPost = async ({ title, author, description, content }) => {
   return newPost;
 };
 
-module.exports = { getPosts, createPost };
+deletePost = async (id) => {
+  const deletedPost = await Posts.findByIdAndDelete(id);
+
+  return deletedPost;
+};
+module.exports = { getPosts, createPost, deletePost };
