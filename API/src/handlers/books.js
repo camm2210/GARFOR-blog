@@ -1,4 +1,4 @@
-const { getBooks, postBook, deleteBook } = require("../controllers/books");
+const { getBooks, postBook, deleteBook } = require("../controllers/book");
 
 const getBooksHandler = async (req, res) => {
   try {
