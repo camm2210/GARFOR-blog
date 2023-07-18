@@ -3,13 +3,6 @@
 import { useState } from "react";
 import validation from "@/validations/validations";
 
-const login = (userData) => {
-  if (userData.password === PASSWORD && userData.email === EMAIL) {
-    setAccess(true);
-    navigate("/home");
-  }
-};
-
 const Login = () => {
   const [data, setData] = useState({
     email: "",
