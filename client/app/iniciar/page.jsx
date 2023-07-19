@@ -46,7 +46,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <>
       <div>
         <h2>Iniciar sesión</h2>
 
@@ -90,7 +90,7 @@ const Login = () => {
           </div>
         </form>
       </div>
-    </div>
+    </>
   );
 };
 

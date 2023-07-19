@@ -1,9 +1,24 @@
-const { getBooks, postBook, deleteBook } = require("../controllers/book");
+const {
+  getBooks,
+  postBook,
+  deleteBook,
+  getBookById,
+} = require("../controllers/book");
 
 const getBooksHandler = async (req, res) => {
   try {
     const allBooks = await getBooks();
     res.send(allBooks);
+  } catch (error) {
+    res.status(404).json({ error: error.message });
+  }
+};
+
+const getBookByIdHandler = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const book = await getBookById(id);
+    res.send(book);
   } catch (error) {
     res.status(404).json({ error: error.message });
   }
@@ -28,4 +43,9 @@ const deleteBookHandler = async (req, res) => {
     res.status(404).json({ error: error.message });
   }
 };
-module.exports = { getBooksHandler, postBookHandler, deleteBookHandler };
+module.exports = {
+  getBooksHandler,
+  postBookHandler,
+  deleteBookHandler,
+  getBookByIdHandler,
+};
