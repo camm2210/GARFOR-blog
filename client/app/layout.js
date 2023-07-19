@@ -1,4 +1,5 @@
 import "./globals.css";
+import NavBar from "@/components/NavBar";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -11,7 +12,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://bootswatch.com/5/litera/bootstrap.min.css"
+        />
+      </head>
+
+      <body>
+        <NavBar />
+        <div className="container p-6">{children}</div>
+      </body>
     </html>
   );
 }

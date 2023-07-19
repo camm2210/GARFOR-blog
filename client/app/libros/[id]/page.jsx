@@ -1,10 +1,18 @@
-import NavBar from "@/components/NavBar";
+import { API } from "../../../config";
+import axios from "axios";
 
-const BookPage = async () => {
+const getbook = async (id) => {
+  const data = await axios.get(`${API}books/${id}`);
+
+  return data.data;
+};
+const BookPage = async ({ params }) => {
+  const book = await getbook(params.id); //! objeto libro
+
   return (
     <div>
-      <NavBar />
       <h1>Book detail</h1>
+      <h1>{book.title}</h1>
     </div>
   );
 };

@@ -1,5 +1,4 @@
-import NavBar from "@/components/NavBar";
-import Posts from "@/components/posts";
+import Posts from "@/components/Posts";
 import axios from "axios";
 import { API } from "../../config";
 
@@ -13,8 +12,9 @@ const Blog = async () => {
 
   return (
     <>
-      <NavBar />
-      <Posts posts={posts} />
+      <div className="container d-flex">
+        <Posts posts={posts} />
+      </div>
     </>
   );
 };

@@ -10,8 +10,14 @@ const getBookById = async (id) => {
   return book;
 };
 
-const postBook = async ({ title, author, description, content }) => {
-  const newBook = await Book.create({ title, author, description, content });
+const postBook = async ({ title, author, description, content, image }) => {
+  const newBook = await Book.create({
+    title,
+    author,
+    description,
+    content,
+    image,
+  });
 
   return newBook;
 };

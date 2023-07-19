@@ -5,8 +5,14 @@ getPosts = async () => {
   return allPosts;
 };
 
-createPost = async ({ title, author, description, content }) => {
-  const newPost = await Posts.create({ title, author, description, content });
+createPost = async ({ title, author, description, content, image }) => {
+  const newPost = await Posts.create({
+    title,
+    author,
+    description,
+    content,
+    image,
+  });
 
   return newPost;
 };
