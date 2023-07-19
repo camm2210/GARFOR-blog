@@ -6,14 +6,15 @@ const Books = ({ books }) => {
   return (
     <ul>
       {books.map((book) => (
-        <li key={book._id} onClick={() => router.push(`/libros/${book._id}`)}>
+        <div key={book._id} onClick={() => router.push(`/libros/${book._id}`)}>
           <div>
+            <img src={book.image} alt="imagen relacionada" width="30%" />
             <h5>{book.title}</h5>
             <h5>{book.author}</h5>
             <h5>{book.content}</h5>
             <h5>{book.description}</h5>
           </div>
-        </li>
+        </div>
       ))}
     </ul>
   );

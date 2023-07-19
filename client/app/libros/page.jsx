@@ -1,4 +1,4 @@
-import Books from "@/components/books";
+import Books from "@/components/Books";
 import axios from "axios";
 import { API } from "../../config";
 

@@ -12,7 +12,7 @@ const Blog = async () => {
 
   return (
     <>
-      <div className="container d-flex">
+      <div>
         <Posts posts={posts} />
       </div>
     </>
