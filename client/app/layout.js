@@ -1,6 +1,7 @@
 import "./globals.css";
-import NavBar from "@/components/NavBar";
+import NavBar from "../components/NavBar";
 import { Inter } from "next/font/google";
+import { ClerkProvider } from '@clerk/nextjs'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,6 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    <ClerkProvider>
     <html lang="en">
       <head>
         <link
@@ -23,6 +25,7 @@ export default function RootLayout({ children }) {
         <NavBar />
         <div className="container p-6">{children}</div>
       </body>
-    </html>
+      </html>
+      </ClerkProvider>
   );
 }

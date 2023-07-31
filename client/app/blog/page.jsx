@@ -1,4 +1,4 @@
-import Posts from "@/components/Posts";
+import Posts from "../../components/Posts";
 import axios from "axios";
 import { API } from "../../config";
 

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import icon from "../../client/app/favicon.ico";
+import { UserButton } from "@clerk/nextjs";
+
 
 const NavBar = () => {
   return (
@@ -39,6 +41,9 @@ const NavBar = () => {
               </Link>
             </li>
           </ul>
+          <UserButton
+            afterSignOutUrl="/"
+          />
         </div>
       </div>
     </nav>
