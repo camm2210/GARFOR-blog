@@ -6,6 +6,7 @@ import { UserButton } from "@clerk/nextjs";
 
 const NavBar = () => {
   return (
+    <div className="border-bottom">
     <nav className="sticky-top  navbar navbar-expand navbar-expand-lg navbar-light bg-light">
       <div className="container mt-3 mb-3 ">
         <Link className="navbar-brand" href="/">
@@ -27,7 +28,7 @@ const NavBar = () => {
             <li className="nav-item">
               <Link
                 className="fs-11 nav-link text-body-tertiary"
-                href="/libros"
+                href="/about"
               >
                 Sobre Mí
               </Link>
@@ -35,7 +36,7 @@ const NavBar = () => {
             <li className="nav-item">
               <Link
                 className="fs-11 nav-link text-body-tertiary"
-                href="/libros"
+                href="/contacto"
               >
                 Contacto
               </Link>
@@ -46,7 +47,8 @@ const NavBar = () => {
           />
         </div>
       </div>
-    </nav>
+      </nav>
+      </div>
   );
 };
 

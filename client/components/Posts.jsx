@@ -6,7 +6,7 @@ const Posts = ({ posts }) => {
     <div className="list p-4">
       {posts.map((post) => (
         <div className=" d-flex mt-5 mb-5 justify-content-between">
-          <img src={post.image} alt="imagen relacionada" width="30%" />
+          <img src={post.image} alt="imagen relacionada" width="30%" className="mw-30 mw-30" />
           <li
             key={post._id}
             className="list-group-item d-flex justify-content-between p-3"

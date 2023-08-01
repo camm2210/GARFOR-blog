@@ -1,5 +1,6 @@
 import "./globals.css";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 import { Inter } from "next/font/google";
 import { ClerkProvider } from '@clerk/nextjs'
 
@@ -23,7 +24,8 @@ export default function RootLayout({ children }) {
 
       <body>
         <NavBar />
-        <div className="container p-6">{children}</div>
+          <div className="container p-6">{children}</div>
+        <Footer />
       </body>
       </html>
       </ClerkProvider>
