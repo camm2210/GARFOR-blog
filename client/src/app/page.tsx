@@ -6,7 +6,7 @@ import BlogSection from "@/components/Components/BlogSection";
 import Loader from "@/components/UI/Loaders/Loader";
 import ContactForm from "@/components/Components/ContactForm";
 
-function page() {
+function Page() {
   const { data, isFetching, error } = useGetPostsQuery(null);
 
   return (
@@ -65,4 +65,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
