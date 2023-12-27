@@ -13,9 +13,6 @@ function libros() {
             Libros sobre Atletismo, olimpismo y educación física
           </p>
         </div>
-        <div className="z-40">
-          <SearchBar />
-        </div>
       </div>
     </div>
   );
