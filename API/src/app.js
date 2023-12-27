@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const routes = require("./routes/index");
-const { FRONT } = require("../config");
+
 const cors = require("cors");
 
 const server = express();
@@ -17,7 +17,6 @@ server.use(morgan("dev"));
 server.use(cors());
 
 server.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", FRONT);
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"

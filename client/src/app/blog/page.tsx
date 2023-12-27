@@ -7,6 +7,7 @@ import SearchBar from "@/components/UI/SearchBar/SearchBar";
 
 function Blog() {
   const { data, isFetching, error } = useGetPostsQuery(null);
+  console.log(data);
 
   return (
     <div className="bg-white sm:py-32">
