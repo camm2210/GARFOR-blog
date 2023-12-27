@@ -5,7 +5,7 @@ import Loader from "@/components/UI/Loaders/Loader";
 import Blogcard from "@/components/Components/Blogcard";
 import SearchBar from "@/components/UI/SearchBar/SearchBar";
 
-function blog() {
+function Blog() {
   const { data, isFetching, error } = useGetPostsQuery(null);
 
   return (
@@ -36,4 +36,4 @@ function blog() {
   );
 }
 
-export default blog;
+export default Blog;
