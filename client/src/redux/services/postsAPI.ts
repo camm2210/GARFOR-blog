@@ -2,8 +2,6 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
-console.log(URL);
-
 type Post = {
   _id: string;
   title: string;
@@ -20,7 +18,7 @@ export const postAPI = createApi({
   }),
   endpoints: (builder) => ({
     getPosts: builder.query<Post[], null>({
-      query: () => "posts",
+      query: () => "/posts",
     }),
   }),
 });
